@@ -1,0 +1,63 @@
+
+Q: nonlinear /  linear function for classification
+
+
+=============================================================================
+ Classification
+=============================================================================
+(1) Navie bayesian
+
+(2) Logistic regression
+
+classification with logistic regression and the sigmoid function
+
+# can think of logistic regression as a probability estimate
+
+sigmoid
+
+Q(z) = 1 / ( 1 +  e^(-z))  
+
+algorithm:
+
+value = E_i(feature_i * weight_i)
+score = sigmoid(value)
+class = cls(score)
+
+function cls:
+	if score > 0.5  class 1
+	else if score < 0.5 class 2
+
+z = w_0*x_0 + w_1*x_0 + ... + w_n*x_n  (z = w^T * x )
+
+x:  is input data
+w:  best coefficients
+
+optimization algorithms : 
+(1) gradient ascent
+(2) stochastic gradient ascent
+
+train: using gradient ascent to find the best parameters:
+
+pseudocde for the gradient ascent:
+
+start with the weights all set to 1
+repeat R number of times:
+  calculate the gradient of the entrire dataset
+  update the weight vector by alaph * gradient
+  return the weight vector
+
+pseudocde for the stochastic gradient ascent
+[update the weights using only one instance at a time, 
+SGA is and example of an online learning algorithm]
+
+start with the weights all set to 1
+for each picec of data in the dataset:
+  calculate the gradient of on piece of data
+  update the weights vector by alpha * gradient
+  return the weights vector
+
+
+(3) Support vector machines
+
+
+
